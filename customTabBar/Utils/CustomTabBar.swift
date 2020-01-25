@@ -19,11 +19,11 @@ setupMiddleButton()
     
     func setupMiddleButton() {
 
-        let middleBtn = UIButton(frame: CGRect(x: (self.view.bounds.width / 2)-25, y: -10, width: 50, height: 50))
+        let middleBtn = UIButton(frame: CGRect(x: (self.view.bounds.width / 2)-50, y: -45, width: 100, height: 100))
         
         //STYLE THE BUTTON YOUR OWN WAY
-        let largeConfig = UIImage.SymbolConfiguration(textStyle: .largeTitle)
-        let largeBolt = UIImage(systemName: "bolt", withConfiguration: largeConfig)
+        
+        let largeBolt = UIImage(named:"bellman_bottom-icon")
 
         middleBtn.setImage(largeBolt, for: .normal)
         
@@ -81,17 +81,17 @@ class MyTabBar: UITabBar {
         self.addShape()
     }
     func createPath() -> CGPath {
-        let height: CGFloat = 60
+        let height: CGFloat = 50
         let path = UIBezierPath()
         let centerWidth = self.frame.width / 2
         path.move(to: CGPoint(x: 0, y: 0)) // start top left
         path.addLine(to: CGPoint(x: (centerWidth - height * 2), y: 0)) // the beginning of the trough
 
         path.addCurve(to: CGPoint(x: centerWidth, y: height),
-        controlPoint1: CGPoint(x: (centerWidth - 25), y: 0), controlPoint2: CGPoint(x: centerWidth - 40, y: height))
+        controlPoint1: CGPoint(x: (centerWidth - 15), y: 0), controlPoint2: CGPoint(x: centerWidth - 55, y: height))
 
         path.addCurve(to: CGPoint(x: (centerWidth + height * 2), y: 0),
-        controlPoint1: CGPoint(x: centerWidth + 40, y: height), controlPoint2: CGPoint(x: (centerWidth + 25), y: 0))
+        controlPoint1: CGPoint(x: centerWidth + 55, y: height), controlPoint2: CGPoint(x: (centerWidth + 15), y: 0))
 
         path.addLine(to: CGPoint(x: self.frame.width, y: 0))
         path.addLine(to: CGPoint(x: self.frame.width, y: self.frame.height))
