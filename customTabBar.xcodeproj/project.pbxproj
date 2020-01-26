@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A6C66A88074B16255854770E /* Pods_customTabBar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563C7C87211C47C81AB70A73 /* Pods_customTabBar.framework */; };
+		D92C82ED23DDC64500992171 /* HomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C82EC23DDC64500992171 /* HomeCollectionCell.swift */; };
+		D92C82EF23DDD2AD00992171 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C82EE23DDD2AD00992171 /* HomeRouter.swift */; };
+		D92C82F123DDDB3800992171 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C82F023DDDB3800992171 /* HomeManager.swift */; };
+		D92C82F323DDDB8300992171 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C82F223DDDB8300992171 /* HomeModel.swift */; };
 		D9F6C0B323DB8AC600F416DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F6C0B223DB8AC600F416DF /* AppDelegate.swift */; };
 		D9F6C0B523DB8AC600F416DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F6C0B423DB8AC600F416DF /* SceneDelegate.swift */; };
 		D9F6C0BA23DB8AC600F416DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F6C0B823DB8AC600F416DF /* Main.storyboard */; };
@@ -18,12 +22,17 @@
 		D9F6C0D123DCC2EE00F416DF /* ExUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F6C0D023DCC2EE00F416DF /* ExUITextField.swift */; };
 		D9F6C0D323DCCF1400F416DF /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F6C0D223DCCF1400F416DF /* HeaderCell.swift */; };
 		D9F6C0D523DCCF6400F416DF /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F6C0D423DCCF6400F416DF /* HomeTableViewCell.swift */; };
+		D9F6C0D723DCF38400F416DF /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F6C0D623DCF38400F416DF /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		501A30B8680C94A50F95C307 /* Pods-customTabBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-customTabBar.release.xcconfig"; path = "Target Support Files/Pods-customTabBar/Pods-customTabBar.release.xcconfig"; sourceTree = "<group>"; };
 		563C7C87211C47C81AB70A73 /* Pods_customTabBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_customTabBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77490B8E562035B00D513247 /* Pods-customTabBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-customTabBar.debug.xcconfig"; path = "Target Support Files/Pods-customTabBar/Pods-customTabBar.debug.xcconfig"; sourceTree = "<group>"; };
+		D92C82EC23DDC64500992171 /* HomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
+		D92C82EE23DDD2AD00992171 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		D92C82F023DDDB3800992171 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
+		D92C82F223DDDB8300992171 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		D9F6C0AF23DB8AC600F416DF /* customTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = customTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F6C0B223DB8AC600F416DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9F6C0B423DB8AC600F416DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +45,7 @@
 		D9F6C0D023DCC2EE00F416DF /* ExUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExUITextField.swift; sourceTree = "<group>"; };
 		D9F6C0D223DCCF1400F416DF /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		D9F6C0D423DCCF6400F416DF /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		D9F6C0D623DCF38400F416DF /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +122,7 @@
 		D9F6C0C923DC84EC00F416DF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D92C82F223DDDB8300992171 /* HomeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -119,6 +130,8 @@
 		D9F6C0CA23DC84F500F416DF /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				D92C82EE23DDD2AD00992171 /* HomeRouter.swift */,
+				D92C82F023DDDB3800992171 /* HomeManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -127,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				D9F6C0C623DB8B1600F416DF /* CustomTabBar.swift */,
+				D9F6C0D623DCF38400F416DF /* CardView.swift */,
 				D9F6C0D023DCC2EE00F416DF /* ExUITextField.swift */,
 			);
 			path = Utils;
@@ -147,6 +161,7 @@
 				D9F6C0CE23DC883600F416DF /* HomeVC.swift */,
 				D9F6C0D223DCCF1400F416DF /* HeaderCell.swift */,
 				D9F6C0D423DCCF6400F416DF /* HomeTableViewCell.swift */,
+				D92C82EC23DDC64500992171 /* HomeCollectionCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -266,13 +281,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D92C82F123DDDB3800992171 /* HomeManager.swift in Sources */,
 				D9F6C0C723DB8B1600F416DF /* CustomTabBar.swift in Sources */,
+				D92C82ED23DDC64500992171 /* HomeCollectionCell.swift in Sources */,
 				D9F6C0D123DCC2EE00F416DF /* ExUITextField.swift in Sources */,
 				D9F6C0D523DCCF6400F416DF /* HomeTableViewCell.swift in Sources */,
 				D9F6C0CF23DC883600F416DF /* HomeVC.swift in Sources */,
 				D9F6C0B323DB8AC600F416DF /* AppDelegate.swift in Sources */,
 				D9F6C0D323DCCF1400F416DF /* HeaderCell.swift in Sources */,
+				D92C82F323DDDB8300992171 /* HomeModel.swift in Sources */,
+				D9F6C0D723DCF38400F416DF /* CardView.swift in Sources */,
 				D9F6C0B523DB8AC600F416DF /* SceneDelegate.swift in Sources */,
+				D92C82EF23DDD2AD00992171 /* HomeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

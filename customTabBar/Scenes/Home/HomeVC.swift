@@ -20,6 +20,15 @@ class HomeVC: UIViewController {
         searchTextField.withImage(direction: .left, image: #imageLiteral(resourceName: "location_search_icon"), colorSeparator: .clear, colorBorder: .clear)
         searchTextField.withImage(direction: .right, image: #imageLiteral(resourceName: "filter_inside_search"), colorSeparator: .gray, colorBorder: .clear)
         searchTextField.layer.cornerRadius = 15
+        
+        HomeManager.fetchLatestData { (result) in
+            switch result{
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
 
         // Do any additional setup after loading the view.
     }

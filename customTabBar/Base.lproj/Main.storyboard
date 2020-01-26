@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -83,6 +84,111 @@
                                             <outlet property="categoryImage" destination="nQV-sC-gpv" id="B1T-dU-OFw"/>
                                             <outlet property="categoryName" destination="JfH-cZ-qyU" id="eOW-9i-ndn"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemsCell" rowHeight="291" id="f2a-Kd-Iig" customClass="HomeTableViewCell" customModule="customTabBar" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="79" width="414" height="291"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f2a-Kd-Iig" id="h7N-2W-sXi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="291"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="emU-8x-VaP">
+                                                    <rect key="frame" x="20" y="4" width="394" height="283"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="2" id="FiL-UX-ITG">
+                                                        <size key="itemSize" width="242" height="265"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xus-2E-KYL" customClass="HomeCollectionCell" customModule="customTabBar" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="9" width="242" height="265"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Yhd-fY-Xf6">
+                                                                <rect key="frame" x="0.0" y="0.0" width="242" height="265"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Go-Tg-DoQ" customClass="CardView" customModule="customTabBar" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="242" height="265"/>
+                                                                        <subviews>
+                                                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XS6-I2-htc" customClass="CardView" customModule="customTabBar" customModuleProvider="target">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="242" height="199"/>
+                                                                                <subviews>
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lse-DT-szX">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="242" height="199"/>
+                                                                                    </imageView>
+                                                                                </subviews>
+                                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="trailing" secondItem="lse-DT-szX" secondAttribute="trailing" id="F5u-IT-f1W"/>
+                                                                                    <constraint firstItem="lse-DT-szX" firstAttribute="top" secondItem="XS6-I2-htc" secondAttribute="top" id="US0-TI-uyi"/>
+                                                                                    <constraint firstItem="lse-DT-szX" firstAttribute="leading" secondItem="XS6-I2-htc" secondAttribute="leading" id="fuE-Se-lK8"/>
+                                                                                    <constraint firstAttribute="bottom" secondItem="lse-DT-szX" secondAttribute="bottom" id="y0x-Vo-luY"/>
+                                                                                </constraints>
+                                                                                <userDefinedRuntimeAttributes>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerrRadius">
+                                                                                        <real key="value" value="6"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                        <real key="value" value="0.10000000000000001"/>
+                                                                                    </userDefinedRuntimeAttribute>
+                                                                                </userDefinedRuntimeAttributes>
+                                                                            </view>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihZ-ix-aTQ">
+                                                                                <rect key="frame" x="8" y="209" width="214" height="18"/>
+                                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="XS6-I2-htc" firstAttribute="leading" secondItem="3Go-Tg-DoQ" secondAttribute="leading" id="45P-zS-lQj"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="ihZ-ix-aTQ" secondAttribute="trailing" constant="20" id="DXj-Sd-HwN"/>
+                                                                            <constraint firstItem="XS6-I2-htc" firstAttribute="height" secondItem="3Go-Tg-DoQ" secondAttribute="height" multiplier="0.75" id="MEZ-FY-Xle"/>
+                                                                            <constraint firstItem="XS6-I2-htc" firstAttribute="top" secondItem="3Go-Tg-DoQ" secondAttribute="top" id="MmM-Dd-Lfa"/>
+                                                                            <constraint firstItem="ihZ-ix-aTQ" firstAttribute="top" secondItem="lse-DT-szX" secondAttribute="bottom" constant="10" id="NvN-df-EyQ"/>
+                                                                            <constraint firstItem="ihZ-ix-aTQ" firstAttribute="leading" secondItem="3Go-Tg-DoQ" secondAttribute="leading" constant="8" id="SxK-lf-8ZI"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="XS6-I2-htc" secondAttribute="trailing" id="nKc-PM-5Sa"/>
+                                                                        </constraints>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerrRadius">
+                                                                                <real key="value" value="6"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="0.5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </view>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="3Go-Tg-DoQ" secondAttribute="trailing" id="O8I-ew-7cO"/>
+                                                                    <constraint firstItem="3Go-Tg-DoQ" firstAttribute="top" secondItem="Yhd-fY-Xf6" secondAttribute="top" id="UIX-Oq-GvD"/>
+                                                                    <constraint firstItem="3Go-Tg-DoQ" firstAttribute="leading" secondItem="Yhd-fY-Xf6" secondAttribute="leading" id="oBY-4j-QD8"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="3Go-Tg-DoQ" secondAttribute="bottom" id="xTx-AK-n8k"/>
+                                                                </constraints>
+                                                            </collectionViewCellContentView>
+                                                            <size key="customSize" width="242" height="265"/>
+                                                            <connections>
+                                                                <outlet property="cellImage" destination="3Go-Tg-DoQ" id="gS5-Ds-8ma"/>
+                                                                <outlet property="itemName" destination="ihZ-ix-aTQ" id="gzl-sL-zws"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="f2a-Kd-Iig" id="q3l-MG-ImE"/>
+                                                        <outlet property="delegate" destination="f2a-Kd-Iig" id="dAX-hR-XAu"/>
+                                                    </connections>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="emU-8x-VaP" firstAttribute="leading" secondItem="h7N-2W-sXi" secondAttribute="leading" constant="20" symbolic="YES" id="afA-gi-q7N"/>
+                                                <constraint firstAttribute="bottom" secondItem="emU-8x-VaP" secondAttribute="bottom" constant="4" id="w2F-sK-UaC"/>
+                                                <constraint firstItem="emU-8x-VaP" firstAttribute="top" secondItem="h7N-2W-sXi" secondAttribute="top" constant="4" id="xdm-r3-I7G"/>
+                                                <constraint firstAttribute="trailing" secondItem="emU-8x-VaP" secondAttribute="trailing" id="yg4-cv-rUH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

@@ -8,5 +8,7 @@ target 'customTabBar' do
 
   # Pods for customTabBar
    pod 'CircleMenu'
+   pod 'Alamofire'
+   pod 'Kingfisher'
 
 end
