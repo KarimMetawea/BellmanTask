@@ -92,16 +92,16 @@ open class CircleMenu: UIButton {
     /// Circle animation duration
     @IBInspectable open var duration: Double = 2
     /// Distance between center button and buttons
-    @IBInspectable open var distance: Float = 100
+    @IBInspectable open var distance: Float = 80
     /// Delay between show buttons
     @IBInspectable open var showDelay: Double = 0
     /// Start angle of the circle
     @IBInspectable open var startAngle: Float = 0
     /// End angle of the circle
-    @IBInspectable open var endAngle: Float = 360
+    @IBInspectable open var endAngle: Float = 180
 
     // Pop buttons radius, if nil use center button size
-    open var subButtonsRadius: CGFloat?
+    open var subButtonsRadius: CGFloat? = 45
 
     // Show buttons event
     open var showButtonsEvent: UIControl.Event = UIControl.Event.touchUpInside {

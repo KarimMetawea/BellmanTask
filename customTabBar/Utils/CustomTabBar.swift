@@ -13,19 +13,20 @@ class CustomTabBar: UITabBarController,UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-setupMiddleButton()
+        setupMiddleButton()
         // Do any additional setup after loading the view.
     }
     
     func setupMiddleButton() {
+      
 
         let middleBtn = UIButton(frame: CGRect(x: (self.view.bounds.width / 2)-50, y: -45, width: 100, height: 100))
         
         //STYLE THE BUTTON YOUR OWN WAY
         
-        let largeBolt = UIImage(named:"bellman_bottom-icon")
+        let image = UIImage(named:"bellman_bottom-icon")
 
-        middleBtn.setImage(largeBolt, for: .normal)
+        middleBtn.setImage(image, for: .normal)
         
         
         //add to the tabbar and add click event
@@ -37,19 +38,17 @@ setupMiddleButton()
 
     // Menu Button Touch Action
     @objc func menuButtonAction(sender: UIButton) {
-        self.selectedIndex = 2   //to select the middle tab. use "1" if you have only 3 tabs.
+//        self.selectedIndex = 2
+        if let newVC = self.storyboard?.instantiateViewController(withIdentifier: "CircularMenuVC") as? CircularMenuVC{
+                          self.present(newVC, animated: true)
+            
+                      }
     }
     
+  
+    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }
 
@@ -81,7 +80,7 @@ class MyTabBar: UITabBar {
         self.addShape()
     }
     func createPath() -> CGPath {
-        let height: CGFloat = 50
+        let height: CGFloat = 45
         let path = UIBezierPath()
         let centerWidth = self.frame.width / 2
         path.move(to: CGPoint(x: 0, y: 0)) // start top left

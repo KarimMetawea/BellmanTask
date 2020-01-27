@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--SearchVC-->
         <scene sceneID="KAU-Ev-fv7">
             <objects>
-                <viewController id="yhW-fV-hYn" sceneMemberID="viewController">
+                <viewController id="yhW-fV-hYn" customClass="SearchVC" customModule="customTabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EEl-YJ-NP9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4V-uE-4dM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="658" y="779"/>
+            <point key="canvasLocation" x="-503" y="844"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="Lqq-43-Ztu">
@@ -296,12 +296,66 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2C-y6-f9C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-43.478260869565219" y="-829.01785714285711"/>
+            <point key="canvasLocation" x="1800" y="-14"/>
         </scene>
-        <!--View Controller-->
+        <!--Circular MenuVC-->
+        <scene sceneID="mca-VI-Fon">
+            <objects>
+                <viewController storyboardIdentifier="CircularMenuVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="lA6-7i-Ccy" customClass="CircularMenuVC" customModule="customTabBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VIS-AH-tGH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQY-sc-6Pj" customClass="CircleMenu" customModule="CircleMenu">
+                                <rect key="frame" x="157" y="768" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="9HZ-nr-pS7"/>
+                                    <constraint firstAttribute="height" constant="100" id="vCK-fq-WJy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" image="bellman_bottom-icon"/>
+                                <state key="highlighted" image="bellman_bottom-icon"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonsCount">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="0.10000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                        <real key="value" value="150"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="showDelay">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="-70"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endAngle">
+                                        <real key="value" value="70"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.36738006161971831" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KQY-sc-6Pj" firstAttribute="top" secondItem="SvG-Z4-diD" secondAttribute="bottom" constant="-94" id="OQP-wc-43e"/>
+                            <constraint firstItem="KQY-sc-6Pj" firstAttribute="centerX" secondItem="VIS-AH-tGH" secondAttribute="centerX" id="ZA4-hO-B6z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SvG-Z4-diD"/>
+                    </view>
+                    <connections>
+                        <outlet property="circleButton" destination="KQY-sc-6Pj" id="Zna-HI-XSA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IvU-2p-5hL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-329" y="-709"/>
+        </scene>
+        <!--NotificationVC-->
         <scene sceneID="pKk-xw-Toy">
             <objects>
-                <viewController id="vB4-Cx-NuD" sceneMemberID="viewController">
+                <viewController id="vB4-Cx-NuD" customClass="NotificationVC" customModule="customTabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JYm-3A-Zby">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -314,7 +368,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xyw-gn-SdM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1458" y="-228"/>
+            <point key="canvasLocation" x="1401" y="844"/>
         </scene>
         <!--Custom Tab Bar-->
         <scene sceneID="ahC-Dv-Jrq">
@@ -337,10 +391,10 @@
             </objects>
             <point key="canvasLocation" x="-328" y="-14"/>
         </scene>
-        <!--View Controller-->
+        <!--Tab Bar MiddleVC-->
         <scene sceneID="kzE-5z-4PZ">
             <objects>
-                <viewController id="BPx-5t-k0G" sceneMemberID="viewController">
+                <viewController id="BPx-5t-k0G" customClass="TabBarMiddleVC" customModule="customTabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fih-4c-ac8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -351,12 +405,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2s-gF-HTt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-204" y="1148"/>
+            <point key="canvasLocation" x="-1501" y="844"/>
         </scene>
-        <!--View Controller-->
+        <!--ProfileVC-->
         <scene sceneID="pkm-7g-Utr">
             <objects>
-                <viewController id="sll-Fk-Txj" sceneMemberID="viewController">
+                <viewController id="sll-Fk-Txj" customClass="ProfileVC" customModule="customTabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5vb-hM-baa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -367,7 +421,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oK1-7c-Fva" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1494" y="537"/>
+            <point key="canvasLocation" x="487" y="844"/>
         </scene>
     </scenes>
     <resources>
@@ -375,6 +429,7 @@
         <image name="Home_bottom_icon" width="29" height="29"/>
         <image name="Home_grey_bottom_icon" width="29" height="29"/>
         <image name="bell.fill" catalog="system" width="64" height="62"/>
+        <image name="bellman_bottom-icon" width="62" height="62"/>
         <image name="big_header" width="375" height="280"/>
         <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="location_white" width="11" height="15"/>

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 class TableCellViewModel {
     var items:[Items]
     

@@ -48,7 +48,6 @@ extension HomeTableViewCell:UICollectionViewDelegate,UICollectionViewDataSource{
 extension HomeTableViewCell:ItemsCellView{
     func configure(viewModel: TableCellViewModel) {
         self.items = viewModel.items
-        self.collectionView.reloadData()
 
     }
     

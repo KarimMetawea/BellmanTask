@@ -34,8 +34,8 @@ internal class CircleMenuButton: UIButton {
     init(size: CGSize, platform: UIView, distance: Float, angle: Float = 0) {
         super.init(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: size))
 
-        backgroundColor = UIColor(red: 0.79, green: 0.24, blue: 0.27, alpha: 1)
-        layer.cornerRadius = size.height / 2.0
+        backgroundColor = .white
+        layer.cornerRadius = 30
 
         let aContainer = createContainer(CGSize(width: size.width, height: CGFloat(distance)), platform: platform)
 
