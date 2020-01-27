@@ -142,6 +142,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		D9670E0623DF65E000B2C606 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D9F6C0BB23DB8ACA00F416DF /* Assets.xcassets */,
+				D9F6C0BD23DB8ACA00F416DF /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D9670E0723DF660300B2C606 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D9F6C0B823DB8AC600F416DF /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		D9F6C0A623DB8AC600F416DF = {
 			isa = PBXGroup;
 			children = (
@@ -163,14 +180,13 @@
 		D9F6C0B123DB8AC600F416DF /* customTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				D9670E0623DF65E000B2C606 /* Resources */,
 				D9F6C0CC23DC851000F416DF /* Configuration */,
 				D9F6C0CB23DC850100F416DF /* Utils */,
 				D9F6C0CA23DC84F500F416DF /* Networking */,
 				D9F6C0C923DC84EC00F416DF /* Model */,
 				D9F6C0C823DC84DE00F416DF /* Scenes */,
-				D9F6C0B823DB8AC600F416DF /* Main.storyboard */,
-				D9F6C0BB23DB8ACA00F416DF /* Assets.xcassets */,
-				D9F6C0BD23DB8ACA00F416DF /* LaunchScreen.storyboard */,
+				D9670E0723DF660300B2C606 /* Storyboards */,
 				D9F6C0C023DB8ACA00F416DF /* Info.plist */,
 			);
 			path = customTabBar;

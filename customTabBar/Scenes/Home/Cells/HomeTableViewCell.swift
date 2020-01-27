@@ -11,12 +11,11 @@ import UIKit
 class HomeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var items:[Items] = []{
+    var viewModel:TableCellViewModelProtocol?{
         didSet{
-            self.collectionView.reloadData()
+            collectionView.reloadData()
         }
     }
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,13 +31,15 @@ class HomeTableViewCell: UITableViewCell {
 
 extension HomeTableViewCell:UICollectionViewDelegate,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return viewModel?.numberOfIems ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! HomeCollectionCell
+        if let model = viewModel?.itemForCell(at: indexPath.row){
+            cell.configureCell(model:model )
+        }
         
-        cell.configureCell(model: items[indexPath.row])
         return cell
     }
     
@@ -47,7 +48,7 @@ extension HomeTableViewCell:UICollectionViewDelegate,UICollectionViewDataSource{
 
 extension HomeTableViewCell:ItemsCellView{
     func configure(viewModel: TableCellViewModel) {
-        self.items = viewModel.items
+        self.viewModel = viewModel
 
     }
     

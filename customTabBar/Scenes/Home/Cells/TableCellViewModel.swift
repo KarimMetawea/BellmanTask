@@ -8,8 +8,23 @@
 
 import Foundation
 
-class TableCellViewModel {
-    var items:[Items]
+protocol TableCellViewModelProtocol {
+    var numberOfIems:Int{get}
+    func itemForCell(at index:Int )-> Items
+}
+
+
+
+class TableCellViewModel:TableCellViewModelProtocol {
+    var numberOfIems: Int{
+        return items.count
+    }
+    
+    func itemForCell(at index: Int) -> Items {
+        return items[index]
+    }
+    
+    private var items:[Items]
     
     init(items:[Items]) {
         self.items = items
