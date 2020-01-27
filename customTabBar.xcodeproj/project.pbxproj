@@ -12,6 +12,8 @@
 		D92C82EF23DDD2AD00992171 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C82EE23DDD2AD00992171 /* HomeRouter.swift */; };
 		D92C82F123DDDB3800992171 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C82F023DDDB3800992171 /* HomeManager.swift */; };
 		D92C82F323DDDB8300992171 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C82F223DDDB8300992171 /* HomeModel.swift */; };
+		D92C82F523DDF84B00992171 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C82F423DDF84B00992171 /* HomePresenter.swift */; };
+		D92C82F723DE6C1500992171 /* TableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C82F623DE6C1500992171 /* TableCellViewModel.swift */; };
 		D9F6C0B323DB8AC600F416DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F6C0B223DB8AC600F416DF /* AppDelegate.swift */; };
 		D9F6C0B523DB8AC600F416DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F6C0B423DB8AC600F416DF /* SceneDelegate.swift */; };
 		D9F6C0BA23DB8AC600F416DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9F6C0B823DB8AC600F416DF /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 		D92C82EE23DDD2AD00992171 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		D92C82F023DDDB3800992171 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
 		D92C82F223DDDB8300992171 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		D92C82F423DDF84B00992171 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		D92C82F623DE6C1500992171 /* TableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellViewModel.swift; sourceTree = "<group>"; };
 		D9F6C0AF23DB8AC600F416DF /* customTabBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = customTabBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9F6C0B223DB8AC600F416DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9F6C0B423DB8AC600F416DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 				D9F6C0D223DCCF1400F416DF /* HeaderCell.swift */,
 				D9F6C0D423DCCF6400F416DF /* HomeTableViewCell.swift */,
 				D92C82EC23DDC64500992171 /* HomeCollectionCell.swift */,
+				D92C82F423DDF84B00992171 /* HomePresenter.swift */,
+				D92C82F623DE6C1500992171 /* TableCellViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -290,6 +296,8 @@
 				D9F6C0B323DB8AC600F416DF /* AppDelegate.swift in Sources */,
 				D9F6C0D323DCCF1400F416DF /* HeaderCell.swift in Sources */,
 				D92C82F323DDDB8300992171 /* HomeModel.swift in Sources */,
+				D92C82F523DDF84B00992171 /* HomePresenter.swift in Sources */,
+				D92C82F723DE6C1500992171 /* TableCellViewModel.swift in Sources */,
 				D9F6C0D723DCF38400F416DF /* CardView.swift in Sources */,
 				D9F6C0B523DB8AC600F416DF /* SceneDelegate.swift in Sources */,
 				D92C82EF23DDD2AD00992171 /* HomeRouter.swift in Sources */,
